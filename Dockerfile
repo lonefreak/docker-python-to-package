@@ -8,7 +8,7 @@ RUN yum groupinstall -y "Development tools" \
 	&& yum install -y zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel \
 	&& yum clean all
 RUN wget --no-check-certificate -P $PYTHON_INSTALL_DIR https://www.python.org/ftp/python/$PYTHON_VERSION/Python-$PYTHON_VERSION.tar.xz \
-	&& tar xf Python-$PYTHON_VERSION.tar.xz -C $PYTHON_INSTALL_DIR \
+	&& tar xf $PYTHON_INSTALL_DIR/Python-$PYTHON_VERSION.tar.xz -C $PYTHON_INSTALL_DIR \
 	&& cd $PYTHON_INSTALL_DIR/Python-$PYTHON_VERSION \
 	&& ./configure --prefix=/usr/local \
 	&& make \
