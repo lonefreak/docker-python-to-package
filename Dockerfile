@@ -20,3 +20,7 @@ RUN cd /tmp \
 	&& /usr/local/bin/easy_install-2.7 pip
 RUN pip install -U pip \
 	&& pip install virtualenv
+
+ADD build.sh /build.sh
+ENTRYPOINT ["/build.sh"]
+CMD []
