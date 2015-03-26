@@ -21,7 +21,6 @@ RUN cd /tmp \
 RUN pip install -U pip \
 	&& pip install virtualenv
 
-ADD build.sh /home/jenkins/build.sh
-RUN chown jenkins:jenkins /home/jenkins/build.sh
-ENTRYPOINT ["./build.sh"]
+ADD build.sh /build.sh
+ENTRYPOINT []
 CMD []
